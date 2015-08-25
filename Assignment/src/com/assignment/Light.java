@@ -2,58 +2,77 @@ package com.assignment;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 /**
  * 
  * @author abaghe
- *
+ * 
  */
-final class Light {
-  /**
-   * light
-   */
+public final class Light {
+
+	/**
+	 * light
+	 */
 	private static int lightspeed;
 	/**
-	   * light
-	   */
+	 * light
+	 */
 	private static int days;
 	/**
-	   * light
-	   */
+	 * light
+	 */
 	private static int seconds;
 	/**
-	   * light
-	   */
+	 * light
+	 */
 	private static int distance;
 	/**
-	 * light speed
-	 * days
-	 * seconds
-	 * distance
+	 * light speed days seconds distance
 	 */
-	static{
-		 lightspeed = 186000;
-		 days = 1000;
-	}
-	
+	private static String str;
 
-public static void main(final String...args) {
-	
-	
-	  
-	    seconds = days * 24 * 60 * 60;
-	  
-    
-    distance = lightspeed * seconds; // compute distance
-    
-    final Logger log = Logger.getLogger(Light.class.getName());
-    if (log.isLoggable(Level.FINE)){
-    log.fine("In " + days);
-    }
-    if (log.isLoggable(Level.FINE)){
-    log.fine(" days light will travel about ");
-    }
-    if (log.isLoggable(Level.FINE)){
-    log.fine(distance + " miles.");
-    }
-  }
+	/**
+	 * String to remove delimiter str is the String
+	 */
+	private static Class<Light> cls;
+    /**
+	 * cls class variable
+	 */
+	public final static Logger LOG=Logger.getLogger(str);;
+	/**
+	 * log
+	 */
+	private Light() {
+
+	}
+    static {
+		lightspeed = 186000;
+		days = 1000;
+	}
+
+	/**
+	 * 
+	 * @param args
+	 */
+
+	public static void main(final String... args) {
+
+		seconds = days * 24 * 60 * 60;
+
+		distance = lightspeed * seconds; // compute distance
+
+		cls = Light.class;
+		str = cls.getName();
+		final Level level = Level.FINE;
+		final boolean condition = LOG.isLoggable(level);
+			if(condition){
+			LOG.fine("In " + days);
+			}
+			if(condition){
+			LOG.fine(" days light will travel about ");
+			}
+			if(condition){
+			LOG.fine(distance + " miles.");
+			}
+	}
 }
