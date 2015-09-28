@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<%@taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+Hello
+<jsp:useBean id="userBean" class="model.User" scope="request" ></jsp:useBean>
+Welcome <jsp:getProperty property="fname" name="userBean"/>
+
+<br>
+${requestScope.userBean.fname}
+${4+4}
+<table>
+<tr><td><c:forEach var="item" begin="1" end="10">${item}</c:forEach>
+</table>
+<c:forEach items="${requestScope.userBean.map} var="entry">
+${entry.key}
+${entry.value}
+</c:forEach>
+</body>
+</html>

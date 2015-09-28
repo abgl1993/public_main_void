@@ -1,0 +1,74 @@
+package com.sapient;
+
+public class Item {
+	private String U_ID;
+	private String BRAND_NAME;
+	private String PRODUCT_TYPE;
+	private String MODEL_NAME;
+	private String UTILITY;
+	private String PRO_QUANTITY;
+	private String COST;
+	private String DESCRIPTION;
+	
+	public Item(String uid, String brandName, String productType, String modelName, String utility, String proQuantity,String cost, String description){
+		U_ID = uid;
+		BRAND_NAME = brandName;
+		PRODUCT_TYPE = productType;
+		MODEL_NAME = modelName;
+		UTILITY = utility;
+		PRO_QUANTITY = proQuantity;
+		COST = cost;
+		DESCRIPTION = description;
+	}
+	
+	public String getU_ID() {
+		return U_ID;
+	}
+	public void setU_ID(String u_ID) {
+		U_ID = u_ID;
+	}
+	public String getBRAND_NAME() {
+		return BRAND_NAME;
+	}
+	public void setBRAND_NAME(String bRAND_NAME) {
+		BRAND_NAME = bRAND_NAME;
+	}
+	public String getPRODUCT_TYPE() {
+		return PRODUCT_TYPE;
+	}
+	public void setPRODUCT_TYPE(String pRODUCT_TYPE) {
+		PRODUCT_TYPE = pRODUCT_TYPE;
+	}
+	public String getMODEL_NAME() {
+		return MODEL_NAME;
+	}
+	public void setMODEL_NAME(String mODEL_NAME) {
+		MODEL_NAME = mODEL_NAME;
+	}
+	public String getUTILITY() {
+		return UTILITY;
+	}
+	public void setUTILITY(String uTILITY) {
+		UTILITY = uTILITY;
+	}
+	public String getPRO_QUANTITY() {
+		return PRO_QUANTITY;
+	}
+	public void setPRO_QUANTITY(String pRO_QUANTITY) {
+		PRO_QUANTITY = pRO_QUANTITY;
+	}
+	public String getCOST() {
+		return COST;
+	}
+	public void setCOST(String cOST) {
+		COST = cOST;
+	}
+	public String getDESCRIPTION() {
+		return DESCRIPTION;
+	}
+	public void setDESCRIPTION(String dESCRIPTION) {
+		DESCRIPTION = dESCRIPTION;
+	}
+	
+	
+}

@@ -1,0 +1,21 @@
+package model;
+
+import java.io.Serializable;
+
+public class User implements Serializable {
+     private String fname;
+
+	public String getFname() {
+		return fname;
+	}
+
+	public void setFname(String fname) {
+		this.fname = fname;
+	}
+    public boolean validateLogin(String email,String password){
+    	if(email.equalsIgnoreCase("mr.abgl@gmail.com")&& password.equals("pass#123")){
+    		return true;
+    	}
+		return false;
+    }
+}

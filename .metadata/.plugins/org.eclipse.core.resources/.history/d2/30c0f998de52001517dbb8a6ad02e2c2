@@ -1,0 +1,16 @@
+package com.sapient.store.payments;
+
+public class Cash extends Payment {
+	private Object cashTendered;
+
+	public Object getCashTendered() {
+		return cashTendered;
+	}
+
+	public void setCashTendered(Object cashTendered) {
+		this.cashTendered = cashTendered;
+	}
+
+	
+	
+}

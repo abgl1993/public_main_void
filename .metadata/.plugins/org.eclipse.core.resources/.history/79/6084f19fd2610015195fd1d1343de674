@@ -1,0 +1,43 @@
+function ajaxFunction(){
+	var xmlHttp;
+	
+	try
+	{
+	        xmlHttp = new XMLHttpRequest();
+	    
+	  }
+	    catch(e)
+	        {
+	                //Internet Explorer
+	          try
+	                {
+	                   xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+	                }
+		catch(e)
+	                {
+	                        try
+	                        {
+	                                xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+	                                        
+	                        }
+	                        catch(e)
+	                        {
+	                                
+	                                        xmlHttp = new ActiveXObject("your browser does not support AJAX!");
+	                                        return false;
+	                                
+	                                }
+	                }
+	        }
+
+
+xmlHttp.onreadystatechange=function()
+{
+	if(xmlHttp.readyState==4){
+		document.getElementById("divHello").innerHTML=xmlHttp.responseText;
+	}
+}
+xmlHttp.open("GET","greet?firstname="+document.regfrm.fname.value,true);
+xmlHttp.send(null);
+}
+

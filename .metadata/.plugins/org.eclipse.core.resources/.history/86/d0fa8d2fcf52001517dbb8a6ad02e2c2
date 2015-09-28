@@ -1,0 +1,40 @@
+package com.sapient.store.payments;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import com.sapient.store.orders.Order;
+
+public class PaymentTest {
+    Payment payment;
+    Order order;
+	@Before
+	public void setUp() throws Exception {
+	}
+
+	@After
+	public void tearDown() throws Exception {
+	}
+
+	
+	@Test
+	public void testAmount() {
+		double amount=100.00;
+	    payment=new Payment();
+	    payment.setAmount(amount);
+	    double actual=payment.getAmount();
+	    assertEquals(amount, actual);
+	}
+
+	@Test
+	public void testOrder() {
+	      order=new Order();
+	      payment.setOrder(order);
+	      Order actual=new Order();
+	      assertEquals(order, actual);
+	}
+
+}

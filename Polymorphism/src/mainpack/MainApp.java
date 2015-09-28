@@ -28,20 +28,8 @@ class Contract extends Employee{
 		System.out.println("contract's Salary");
 	}
 }
-class HR {
-	public Employee recruit(String empType) {
 
-		if (empType.equals("I")) {
-			return new Intern();
-		} else if (empType.equals("C")) {
-			return new ConfirmedEmployee();
-		} 
-		else if (empType.equals("T")) {
-			return new Contract();
-		}else
-			return null;
-	}
-}
+
 class Finance{
 	public void processSalary(Employee emp){
 		emp.netSalary();

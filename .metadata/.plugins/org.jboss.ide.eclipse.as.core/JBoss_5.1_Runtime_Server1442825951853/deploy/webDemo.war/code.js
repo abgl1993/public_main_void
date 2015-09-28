@@ -1,0 +1,19 @@
+$(document).ready(function(){
+	$("#btn1").click(function(){
+        $("#div1").fadeIn();
+        $("#div2").fadeIn("slow");
+        $("#div3").fadeIn(3000);
+});
+	
+$("p").on({
+	mouseenter:function(){
+		$(this).css("background-color","gray");
+	},
+	mouseleave:function(){
+		$(this).css("background-color","red");
+	},
+	click:function(){
+		$(this).css("background-color","yellow");
+	}
+});
+});

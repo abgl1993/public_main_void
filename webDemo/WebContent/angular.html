@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body data-ng-app="ca">
+
+	<div data-ng-controller="atulController">
+		<ul>
+			<li data-ng-repeat="x in names">{{x.fname +','+ x.lname}}</li>
+		</ul>
+	</div> 
+
+	<div data-ng-controller="sapientController">
+		<input type="text" data-ng-model="firstname" /> 
+		<input type="text" data-ng-model="lastname" />
+		<p>{{firstname+' '+lastname}}</p>
+	</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+ <script type="text/javascript" src="angular.js"></script> 
+
+	<script type="text/javascript">
+		var app1= angular.module('sapientApp', []);
+		app1.controller('sapientController', function($scope) {
+			$scope.firstname = "Atul";
+			$scope.lastname = "Baghel";
+		});
+		angular.module('ca', ["atulApp","sapientApp"]);
+	</script>
+ 
+</body>
+</html>

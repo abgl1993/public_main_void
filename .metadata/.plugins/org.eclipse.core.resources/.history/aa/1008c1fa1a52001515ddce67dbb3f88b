@@ -1,0 +1,21 @@
+package com.sapient.store.payments;
+
+import com.sapient.store.orders.Order;
+
+public class Payment {
+	private double amount;
+	private long order;
+	
+	public double getAmount() {
+		return amount;
+	}
+	public void setAmount(double amount) {
+		this.amount = amount;
+	}
+	public long getOrder() {
+		return order;
+	}
+	public void setOrder(long order) {
+		this.order = order;
+	}
+}

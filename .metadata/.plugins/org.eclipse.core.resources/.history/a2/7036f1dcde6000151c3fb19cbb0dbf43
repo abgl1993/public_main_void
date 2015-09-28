@@ -1,0 +1,57 @@
+package model;
+
+import java.io.Serializable;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
+
+
+
+public class User implements Serializable {
+     private String fname;
+	private String lname;
+
+	public String getFname() {
+		return fname;
+	}
+
+	public void setFname(String fname) {
+		this.fname = fname;
+	}
+	public String getLname() {
+		return lname;
+	}
+
+	public void setLname(String lname) {
+		this.lname = lname;
+	}
+    public boolean validateLogin(String email,String password){
+    	
+    	Context ctx=null;
+    	java.sql.Connection con=null;
+    	PreparedStatement ps=null;
+    	ResultSet rs=null;
+    	
+    	ctx=new InitialContext();
+    	DataSource ds=(DataSource)ctx.lookup("java:comp/env/jdbc/bankDB");
+    	con=ds.getConnection();
+    	ps=con.prepareStatement("SELECT FIRST_NAME,LAST_NAME FROM USERS WHERE USERID=? AND PASSWORD=?");
+    	ps.setString(1,email);
+    	ps.setString(2, password);
+    	rs=ps.executeQuery();
+    	if(rs.next()){
+    		fname=rs.getString(1);
+    		lname=rs.getString(2);
+    		return true;
+    	}
+    	return false;
+    	
+    	
+    	
+    	
+    
+    }
+}

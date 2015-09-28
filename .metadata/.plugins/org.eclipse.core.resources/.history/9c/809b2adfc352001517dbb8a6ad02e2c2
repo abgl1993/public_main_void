@@ -1,0 +1,72 @@
+package com.sapient.store.payments;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
+
+public class Check extends Payment implements Authorization{
+	private static String name=null;
+	private static String bankID=null;
+	private final static  Map<String,String> bankDetails =new HashMap<String,String>();
+	public final void validbankDetails(){
+		bankDetails.put("HDFCBank","HDFC0001098");
+		bankDetails.put("ICICI Bank","ICICI000000");
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getBankID() {
+		return bankID;
+	}
+	public void setBankID(String bankID) {
+		this.bankID = bankID;
+	}
+	
+	@Override
+	public String authorized() {
+		 
+		// TODO Auto-generated method stub
+		Iterator <Map.Entry<String,String>>mapIterator=bankDetails.entrySet().iterator();
+		while(mapIterator.hasNext()){
+	      Map.Entry<String, String>entry= mapIterator.next();
+	      String name=entry.getKey();
+	      String bankid=entry.getValue();
+	     
+	      System.out.println(name);
+	      System.out.println(bankid);
+	      if(entry.getKey()==name&&entry.getValue()==bankID){
+	    	  return "Check Authorized";
+	      }
+			
+		}
+		return "Check can not be authorized";
+	}
+	public static void main(String args[]){
+	
+		Check check=new Check();
+		check.setName("HDFCBank");
+		check.setBankID("HDFC0001098");
+		check.validbankDetails();
+		//System.out.println(name);
+		//System.out.println(bankID);
+		/*Iterator <Map.Entry<String,String>>mapIterator=bankDetails.entrySet().iterator();
+		 for(Map.Entry<String,String> entry:bankDetails.entrySet()){
+	      //Map.Entry<String, String>entry= mapIterator.next();
+	      String name=entry.getKey();
+	      String bankid=entry.getValue();
+	     
+	      System.out.println(name);
+	      System.out.println(bankid);
+	      if(entry.getKey()==name&&entry.getValue()==bankID){
+	    	 System.out.println("hi");
+	      }
+			
+		}*/
+		check.authorized();
+	}
+	
+}

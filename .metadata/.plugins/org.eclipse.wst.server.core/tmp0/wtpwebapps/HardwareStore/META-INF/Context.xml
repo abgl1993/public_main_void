@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Context >
+
+  <Resource name="jdbc/ProjectDB"
+            auth="Container"
+            type="javax.sql.DataSource"
+            username="Shirish"
+            password="password"
+            driverClassName="oracle.jdbc.driver.OracleDriver"
+            url="jdbc:oracle:thin:@deltahiti31202:1521:XE"
+            maxActive="8"
+            maxIdle="4"/>
+
+</Context>

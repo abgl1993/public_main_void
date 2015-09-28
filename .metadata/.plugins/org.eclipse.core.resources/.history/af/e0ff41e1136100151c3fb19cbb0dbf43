@@ -1,0 +1,7 @@
+package tagpack;
+
+import javax.servlet.jsp.tagext.TagSupport;
+
+public class BannerTag extends TagSupport {
+
+}

@@ -1,0 +1,38 @@
+package com.sapient.store.payments;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class CheckTest {
+
+	@Before
+	public void setUp() throws Exception {
+	}
+
+	@After
+	public void tearDown() throws Exception {
+	}
+
+	@Test
+	public void getSetNametest() {
+	String expected="HDFCBank";
+	String actual=null;
+	Check check=new Check();
+	check.setName("HDFCBank");
+	actual=check.getName();
+	assertEquals(expected, actual);
+	}
+	@Test
+	public void getSetBankIdtest() {
+	String expected="HDFC0001098";
+	String actual=null;
+	Check check=new Check();
+	check.setBankID("HDFC0001098");
+	actual=check.getBankID();
+	assertEquals(expected, actual);
+	}
+
+}

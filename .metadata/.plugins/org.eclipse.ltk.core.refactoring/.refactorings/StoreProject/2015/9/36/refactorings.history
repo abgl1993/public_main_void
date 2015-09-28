@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;StoreProject/src/com/sapient/store/payments/Propeties.properties&apos; to &apos;log4j.properties&apos;" description="Rename resource &apos;Propeties.properties&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/com/sapient/store/payments/Propeties.properties" name="log4j.properties" stamp="1441367009806" updateReferences="true"/>
+</session>

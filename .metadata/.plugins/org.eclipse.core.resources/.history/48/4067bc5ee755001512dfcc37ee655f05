@@ -1,0 +1,13 @@
+package com.sapient.stock;
+
+public class Stock {
+String stockType="ABC";
+int quantity=10;
+public void buy()
+{
+	
+}
+public void sell(){
+	
+}
+}

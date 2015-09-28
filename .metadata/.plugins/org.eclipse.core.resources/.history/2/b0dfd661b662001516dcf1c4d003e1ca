@@ -1,0 +1,52 @@
+package com.sapeint.model;
+
+import java.io.Serializable;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.sql.DataSource;
+
+import com.sapient.DataAccessObject;
+import com.sun.corba.se.pept.transport.Connection;
+
+
+public class User implements Serializable {
+private String email;
+private String password;
+DataAccessObject dao=new DataAccessObject();
+
+public String getEmail() {
+	return email;
+}
+
+public void setEmail(String email) {
+	this.email = email;
+}
+
+public String getPassword() {
+	return password;
+}
+
+public void setPassword(String password) {
+	this.password = password;
+}
+
+public boolean validateLogin(String email,String password){
+	if(dao.validation(email, password))
+		return true;
+	else
+		return false;
+}
+
+public void addNewUser(String name,String email,String password,String contactNo,String address)
+{
+	int uid =(int)Math.random();
+	int i=dao.addUser(uid,name,email,password,contactNo,address);
+	//System.out.print(name);
+}
+
+}

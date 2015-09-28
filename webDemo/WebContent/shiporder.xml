@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shiporder orderid="123"  xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="NewXMLSchema.xsd">
+<orderperson>Atul</orderperson>
+<shipto>
+<name>Atul</name>
+<address>Sapient</address>
+<city>Gurgaon</city>
+<country>India</country>
+</shipto>
+<item>
+<title>Mouse</title>
+<note>Good</note>
+<quantity>100</quantity>
+<prices>10.2</prices>
+</item>
+</shiporder>

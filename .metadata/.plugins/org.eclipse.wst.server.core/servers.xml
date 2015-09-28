@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+  <server auto-publish-time="1" hostname="localhost" id="JBoss 5.1 Runtime Server1442825951853" name="JBoss 5.1 Runtime Server" org.jboss.ide.eclipse.as.core.server.deployDirectoryType="metadata" org.jboss.ide.eclipse.as.core.server.serverMode="local" org.jboss.ide.eclipse.as.core.server.userName="admin" runtime-id="JBoss 5.1 Runtime" server-type="org.jboss.ide.eclipse.as.51" server-type-id="org.jboss.ide.eclipse.as.51" start-timeout="450" stop-timeout="450" timestamp="2">
+    <list key="modules" value0="webDemo::org.eclipse.jst.jee.server:webDemo::jst.web::2.5" value1="JBOSSDemo::org.eclipse.jst.jee.server:JBOSSDemo::jst.web::2.5"/>
+  </server>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers2/Tomcat v6.0 Server at localhost-config" deployDir="wtpwebapps" hostname="localhost" id="Tomcat v6.0 Server at localhost" name="Tomcat v6.0 Server at localhost" runtime-id="Apache Tomcat v6.0" server-type="org.eclipse.jst.server.tomcat.60" server-type-id="org.eclipse.jst.server.tomcat.60" start-timeout="45" stop-timeout="15" testEnvironment="true" timestamp="2">
+    <list key="modules" value0="HardwareStore::org.eclipse.jst.jee.server:HardwareStore::jst.web::2.5" value1="webDemo::org.eclipse.jst.jee.server:webDemo::jst.web::2.5"/>
+  </server>
+</servers>

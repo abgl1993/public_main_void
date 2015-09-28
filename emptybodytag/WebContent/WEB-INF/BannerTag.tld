@@ -1,0 +1,13 @@
+<taglib>
+	<tlib-version>1.0</tlib-version>
+	<jsp-version>1.2</jsp-version>
+	<short-name>Banner Information</short-name>
+	<description>
+		Developing Banner Custom Tags
+	</description>
+	<tag>
+		<name>BannerTag</name>
+		<tag-class>tagpack.BannerTag</tag-class>
+		<body-content>empty</body-content>
+	</tag>
+</taglib>	

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<textarea rows="5" cols="80" id="text" placeholder="What's Up"></textarea>
+<div >
+<h3 id="heading" onmouseover="mouseOver()" onmouseout="mouseOut()">Sapient Corporation</h3>
+<p id="status"></p>
+</div>
+<script>
+function mouseOver(){
+	var heading =document.getElementById("heading");
+	heading.style.color="blue";
+}
+function mouseOut(){
+	var heading =document.getElementById("heading");
+	heading.style.color="read";
+}
+</script>
+<button type="button" onclick="document.getElementById('status').innerHTML=document.getElementById('text').value">Submit</button>
+<input type="button" value="Click" id="btnClick">
+<div id="div1">
+<p id="p1">This is paragraph</p>
+<p id="p2">This is new paragraph</p>
+</div>
+<script>
+var para=document.createElement("p");
+var node=document.createTextNode("This is new");
+para.appendChild(node);
+var element=document.getElementById("div1");
+element.appendChild(para);
+var myCar=new Object();
+myCar.make="ford";
+myCar.model="Mustang"
+document.write(myCar.make);
+</script>
+<script type="text/javascript" src="code.js"></script>
+</body>
+</html>

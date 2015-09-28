@@ -1,8 +1,10 @@
-content_assist_number_of_computers=13
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="org.apache.log4j.Priority"><rhs name\="org.apache.log4j.Level"/></lhs><lhs name\="org.apache.log4j.Level"><rhs name\="org.apache.log4j.Level"/></lhs><lhs name\="java.lang.Exception"><rhs name\="java.lang.InterruptedException"/><rhs name\="java.sql.SQLException"/></lhs><lhs name\="java.lang.Throwable"><rhs name\="java.lang.InterruptedException"/><rhs name\="java.sql.SQLException"/></lhs><lhs name\="java.lang.InterruptedException"><rhs name\="java.lang.InterruptedException"/></lhs><lhs name\="java.awt.Paint"><rhs name\="java.awt.Color"/></lhs><lhs name\="java.awt.Transparency"><rhs name\="java.awt.Color"/></lhs><lhs name\="java.awt.Color"><rhs name\="java.awt.Color"/></lhs><lhs name\="java.lang.Iterable"><rhs name\="java.sql.SQLException"/></lhs><lhs name\="java.sql.SQLException"><rhs name\="java.sql.SQLException"/></lhs><lhs name\="java.io.Writer"><rhs name\="java.io.PrintWriter"/></lhs><lhs name\="java.lang.Appendable"><rhs name\="java.io.PrintWriter"/></lhs><lhs name\="java.io.Closeable"><rhs name\="java.io.PrintWriter"/></lhs><lhs name\="java.io.Flushable"><rhs name\="java.io.PrintWriter"/></lhs><lhs name\="java.io.PrintWriter"><rhs name\="java.io.PrintWriter"/></lhs><lhs name\="com.sapient.DataAccessObject"><rhs name\="com.sapient.DataAccessObject"/></lhs></history>
+content_assist_number_of_computers=14
 content_assist_proposals_background=255,255,255
 content_assist_proposals_foreground=0,0,0
 eclipse.preferences.version=1
 fontPropagated=true
+org.eclipse.jdt.internal.ui.navigator.layout=2
 org.eclipse.jdt.ui.editor.tab.width=
 org.eclipse.jdt.ui.formatterprofiles.version=12
 org.eclipse.jdt.ui.javadoclocations.migrated=true

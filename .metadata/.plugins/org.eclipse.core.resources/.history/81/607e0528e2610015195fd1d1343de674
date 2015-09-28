@@ -1,0 +1,16 @@
+package com.sapeint.model;
+
+import java.io.Serializable;
+
+import com.sapient.Item;
+
+public class ItemValidator implements Serializable {
+	private Item item=null; 
+
+public Item getItem(String item) {
+        
+	return itemAvailability(item);
+}
+
+
+}
